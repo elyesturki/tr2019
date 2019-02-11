@@ -8,13 +8,15 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 //add ng-bootstrap module
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MoteurSearchComponent } from './components/moteur-search/moteur-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MoteurSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,63 @@
+
+ <div class="twidget-container" id="twidget" style="position: relative;">
+    <div class="twidget-tab-content">
+        <form class="ng-valid ng-dirty ng-valid-parse" >
+            <ul class="twidget-form-list clearfix pl-4 pr-4">
+              <li class="twidget-origin twidget-city">
+                <div class="ng-isolate-scope">
+                  <div class="twidget-input-box" select-input=""> 
+                    <label class="ng-binding">Origin</label> 
+                    <input placeholder="Origin" autocomplete="off" type="text"> 
+                  </div>
+                </div>
+              </li>
+              <li class="twidget-destination twidget-city"> 
+               <div class="ng-isolate-scope">
+                  <div class="twidget-input-box" select-input=""> 
+                    <label class="ng-binding">Destination</label> 
+                    <input placeholder="Destination" autocomplete="off" type="text"> 
+                  </div>
+                </div>
+              </li>
+            <li class="twidget-flight-dates input-daterange input-group clearfix"> 
+              <div class="twidget-dep-date twidget-form-item ng-isolate-scope">
+                <div class="twidget-input-box"> 
+                  <label class="ng-binding">Depart date</label> 
+                  <div class="twidget-input-box-show-popup"> 
+                    <input type="text">
+                      <div class="twidget-icon-cal"></div>
+                        <span class="twidget-date-text twidget-date-depart">Depart date</span> 
+                        <span class="twidget-date-text twidget-date-depart ng-hide d-none">18 January, Fri</span> 
+                      </div> 
+                </div> 
+              </div> 
+
+              <div class="twidget-dep-date twidget-form-item ng-isolate-scope">
+                <div class="twidget-input-box"> 
+                  <label class="ng-binding">Return date</label>
+                  <div class="twidget-input-box-show-popup">
+                    <input type="text">
+                      <div class="twidget-icon-cal"></div>
+                        <span class="twidget-date-text twidget-date-depart">Return date</span>
+                        <span class="twidget-date-text twidget-date-depart ng-hide d-none">25 January, Fri</span>
+                      </div>
+                </div> 
+              </div> 
+            </li>
+            <li class="twidget-passengers"> 
+              <label class="ng-binding">Passengers/Class</label> 
+              <div class="twidget-passengers-detail" ng-class="active"> 
+                <div class="twidget-pas-no">
+                <span id="twidget-pas" class="ng-binding">6</span> 
+                <span class="twidget-pas-caption ng-binding">passengers</span> 
+                </div> 
+                <div class="twidget-class ng-binding">economy class </div> 
+              </div> 
+            </li>
+            <li class="twidget-submit-button"> 
+              <button class="ng-binding" style="margin-top: 20px">Search</button> 
+            </li>
+            </ul>
+        </form>
+    </div>
+  </div>

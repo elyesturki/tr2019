@@ -24,7 +24,7 @@
       line-height: 18px;
     }
     &:after {
-      background-image: url('../images/arrow-down.svg');
+      background-image: url('./images/arrow-down.svg');
       background-repeat: no-repeat;
       width: 15px;
       height: 12px;
@@ -108,7 +108,7 @@
         border-radius: 25px;
         line-height: 35px;
         background: #fff 50% 50%/14px no-repeat;
-        background-image: url('../images/minus.svg');
+        background-image: url('./images/minus.svg');
         &:hover {
           background-color: #e0e0e0;
         }
@@ -129,7 +129,7 @@
         border-radius: 25px;
         line-height: 35px;
         background: #fff 50% 50%/14px no-repeat;
-        background-image: url('../images/plus.svg');
+        background-image: url('./images/plus.svg');
         &:hover {
           background-color: #e0e0e0;
         }
