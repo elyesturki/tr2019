@@ -10,6 +10,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MoteurSearchComponent } from './components/moteur-search/moteur-search.component';
 
+import { ApiDataService } from './services/api-data.service';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,9 +25,10 @@ import { MoteurSearchComponent } from './components/moteur-search/moteur-search.
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ApiDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
