@@ -7,7 +7,7 @@
                 <div class="ng-isolate-scope">
                   <div class="twidget-input-box" select-input=""> 
                     <label class="ng-binding">Origin</label> 
-                    <input placeholder="Origin" autocomplete="off" type="text"> 
+                    <input id="typeahead-basic" placeholder="Origin" type="text" [ngbTypeahead]="selectCityOrigin"/>
                   </div>
                 </div>
               </li>
@@ -15,7 +15,7 @@
                <div class="ng-isolate-scope">
                   <div class="twidget-input-box" select-input=""> 
                     <label class="ng-binding">Destination</label> 
-                    <input placeholder="Destination" autocomplete="off" type="text"> 
+                    <input id="typeahead-basic" placeholder="Destination" type="text" [ngbTypeahead]="selectCityDestination"/>
                   </div>
                 </div>
               </li>

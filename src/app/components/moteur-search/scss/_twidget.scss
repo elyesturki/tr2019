@@ -75,17 +75,16 @@
     text-overflow: ellipsis;
   }
   button {
-    font-family: 'Open Sans', arial, sans-serif;
-    font-weight: 600;
+    //font-family: 'Open Sans', arial, sans-serif;
+    //font-weight: 600;
     outline: none;
     cursor: pointer;
-    font-size: 18px;
+    //font-size: 18px;
     border: none;
     background: none;
   }
 
 }
-
 .twidget-city {
   .twidget-pseudo-input {
     position: absolute;
@@ -109,6 +108,17 @@
     margin-top: -48px;
     font-size: 12px;
     color: #999;
+  }
+  .dropdown-menu {
+    width: 100%;
+    border-radius: 0;
+    button {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 0.25rem;
+      border-radius: 0
+    }
+
   }
 }
 
@@ -147,19 +157,19 @@
     }
     &.twidget-submit-button {
       width: 18%;
+      button {
+        height: 50px;
+        margin-top: 12px;
+        line-height: 50px;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: #ffa600;
+        color: #fff;
+      }
     }
     &:last-child {
       margin-right: 0;
-    }
-    button {
-      height: 50px;
-      margin-top: 12px;
-      line-height: 50px;
-      text-align: center;
-      width: 100%;
-      text-transform: uppercase;
-      background-color: #ffa600;
-      color: #fff;
     }
     &.input-daterange > .twidget-form-item {
       float: left;
