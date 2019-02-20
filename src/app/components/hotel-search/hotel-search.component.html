@@ -1,0 +1,21 @@
+<h2>Hotel search</h2>
+ <div class="twidget-container hotel-search" id="twidget">
+    <div class="twidget-tab-content">
+        <form class="form-inline d-block" >
+            <ul class="twidget-form-list clearfix pl-4 pr-4">
+              <li class="twidget-destination twidget-city"> 
+               <app-destination-cities></app-destination-cities>
+              </li>
+            <li class="twidget-flight-dates input-daterange"> 
+              <app-datepicker-range></app-datepicker-range>
+            </li>
+            <li class="twidget-passengers"> 
+              <app-rooms-persons></app-rooms-persons>
+            </li>
+            <li class="twidget-submit-button"> 
+              <button class="ng-binding">Search</button> 
+            </li>
+            </ul>
+        </form>
+    </div>
+  </div>

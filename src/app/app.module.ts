@@ -13,6 +13,13 @@ import { MoteurSearchComponent } from './components/moteur-search/moteur-search.
 import { ApiDataService } from './services/api-data.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DatepickerRangeComponent } from './layout/datepicker-range/datepicker-range.component';
+import { RoomsPersonsComponent } from './layout/rooms-persons/rooms-persons.component';
+import { DestinationCitiesComponent } from './layout/destination-cities/destination-cities.component';
+import { HotelSearchComponent } from './components/hotel-search/hotel-search.component';
+import { VolSearchComponent } from './components/vol-search/vol-search.component';
+import { OriginCitiesComponent } from './layout/origin-cities/origin-cities.component';
+import { PassengersComponent } from './layout/passengers/passengers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    MoteurSearchComponent
+    MoteurSearchComponent,
+    DatepickerRangeComponent,
+    RoomsPersonsComponent,
+    DestinationCitiesComponent,
+    HotelSearchComponent,
+    VolSearchComponent,
+    OriginCitiesComponent,
+    PassengersComponent
   ],
   imports: [
     BrowserModule,

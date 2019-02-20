@@ -1,0 +1,9 @@
+@media (max-width: 1920px) {
+  .twidget-tab-content .twidget-form-list li {
+    &.twidget-destination {
+      width: 100%;
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+  }
+}

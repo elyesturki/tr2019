@@ -1,0 +1,29 @@
+.twidget-input-box {
+  position: relative;
+  .twidget-icon-cal {
+    background: url(./images/calendar.svg) no-repeat 50% 50%;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: 50px;
+    width: 40px;
+    background-size: 20px;
+    cursor: pointer;
+  }
+  .twidget-icon-delete {
+    background: url(./images/icon-delete.svg) no-repeat 50% 50%;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: 50px;
+    width: 40px;
+    background-size: 15px;
+    cursor: pointer;
+  }
+  .twidget-date-text {
+  position: absolute;
+  left: 12px;
+  top: 31px;
+  }
+}
+  
