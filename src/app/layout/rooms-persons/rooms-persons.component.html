@@ -51,7 +51,7 @@
           <div class="modifPopinContent childrenAgeDiv ng-scope" *ngIf="room.childrens.length > minChildrens">
             <p class="labelAgeschild">Age des enfants lors de l'arrivée</p>
             <div id="formLineChild" class="formPopinLine displayTable ng-scope" *ngFor="let child of room.childrens; index as i">
-              <div><label><span class="ng-binding">Enfant {{i+1}} - {{child.age}} </span></label></div>
+              <div><label><span class="ng-binding">Enfant {{i+1}}</span></label></div>
               <div class="selectPopinForm"> <div class="contSelect">
               <div class="select-style">  
                 <select class="browser-default custom-select select-age" [(ngModel)]='child.age'>

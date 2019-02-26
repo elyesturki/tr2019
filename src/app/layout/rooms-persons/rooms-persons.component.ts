@@ -98,7 +98,7 @@ export class RoomsPersonsComponent implements OnInit {
   getChildrenAge() {
     this.tabChildrenAge[0] = "<"+this.childrenAge.min;
     for (var i=this.childrenAge.min; i<this.childrenAge.max+1; i++) {
-      this.tabChildrenAge.push(i);
+      this.tabChildrenAge.push(i.toString());
     }
     return this.tabChildrenAge
   }
