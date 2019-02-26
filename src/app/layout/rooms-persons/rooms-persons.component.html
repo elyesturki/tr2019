@@ -1,9 +1,73 @@
 <label class="ng-binding">Rooms/Persons</label> 
   <div class="twidget-passengers-detail" ng-class="active" (click)="open()"> 
   <div class="twidget-pas-no">
-  <span class="ng-binding">2 Adults , 2 Childrens</span> 
+  <span class="ng-binding">{{getTotalAdults()}} Adults , {{getTotalChildren()}} Childrens</span> 
   </div> 
-  <div class="twidget-class ng-binding">2 Rooms </div> 
+  <div class="twidget-class ng-binding">{{rooms.length}} Rooms </div> 
 </div>
 
-<!--Modal-->
+  <!-- popup -->
+<div id="searchFormLight" class="modifPopin ng-scope" [hidden]="!showPopup">
+   <button type="button" (click)="close()" class="modifPopinCloseBtn fas fa-times-circle"></button>                          
+   <div class="modifPopinTitle">Chambres</div>
+   <div id="paxPopinScrollDiv">
+      <div class="modifPopinContent formSection">
+         <div class="formPopinLine displayTable">
+            <div><label><span>Nombre de chambres</span></label></div>
+            <div class="plusMinusForm">
+               <button type="button" class="fas fa-minus-circle" [ngClass]="{active: rooms.length > minRooms}" (click)="removeRoom()" [disabled]="rooms.length === minRooms"></button>
+               <div class="formCountDiv counter ng-binding">{{rooms.length}}</div>
+               <button type="button" class="fas fa-plus-circle" [ngClass]="{active: rooms.length < maxRooms}" [disabled]="rooms.length === maxRooms" (click)="addRoom()">
+              </button>                                     
+            </div>
+         </div>
+      </div>
+      <!-- ngRepeat: (key, room) in autocomplete.rooms track by $index -->
+      <div class="roomRepartDiv formSection ng-scope" *ngFor="let room of rooms; index as i">
+         <div class="modifPopinContent">
+            <p class="labelRoom ng-binding">Chambre&nbsp; {{i+1}}</p>
+            <div class="formPopinLine displayTable">
+               <div><label><span> Adultes<span class="nowrap">(17 ans et +)</span></span></label></div>
+               <div class="plusMinusForm">
+                  <button type="button" class="fas fa-minus-circle" [ngClass]="{active: room.adults > minAdults}" 
+                  (click)="removeAdult(i)" 
+                  [disabled]="room.adults === minAdults"> </button>                                           
+                  <div class="formCountDiv ng-binding">{{room.adults}}</div>
+                  <button type="button" class="fas fa-plus-circle" [ngClass]="{active: room.adults < maxAdults}" 
+                  (click)="addAdult(i)" 
+                  [disabled]="room.adults === maxAdults"></button>                                       
+               </div>
+            </div>
+            <div id="formLineChild" class="formPopinLine displayTable">
+               <div>                                           <label>                                               <span>                                                    Enfants                                                   <span class="nowrap ageChildLabel">(0 - 16 ans)</span>                                                </span>                                           </label>                                        </div>
+               <div class="plusMinusForm">
+                  <button type="button" class="fas fa-minus-circle" [ngClass]="{active: room.childrens.length > minChildrens }" (click)="removeChild(i)" [disabled]="room.childrens.length === minChildrens">                                           </button>                                           
+                  <div class="formCountDiv ng-binding">{{room.childrens.length}}</div>
+                  <button type="button" class="fas fa-plus-circle" [ngClass]="{active: room.childrens.length < maxChildrens }" (click)="addChild(i)" [disabled]="room.childrens.length === maxChildrens"></button>                               
+               </div>
+            </div>
+          </div> 
+
+          <div class="modifPopinContent childrenAgeDiv ng-scope" *ngIf="room.childrens.length > minChildrens">
+            <p class="labelAgeschild">Age des enfants lors de l'arrivée</p>
+            <div id="formLineChild" class="formPopinLine displayTable ng-scope" *ngFor="let child of room.childrens; index as i">
+              <div><label><span class="ng-binding">Enfant {{i+1}} - {{child.age}} </span></label></div>
+              <div class="selectPopinForm"> <div class="contSelect">
+              <div class="select-style">  
+                <select class="browser-default custom-select select-age" [(ngModel)]='child.age'>
+                   <option *ngFor="let age of tabChildrenAge" [value]="age">
+                    {{age}}
+                   </option>
+                </select>
+              </div>
+              </div></div>
+            </div>
+          </div>
+
+      </div>
+      <!-- end ngRepeat: (key, room) in autocomplete.rooms track by $index -->                              
+      <div class="modifPopinContent">                                 
+        <button class="btn btn-primary btn-block" type="button" (click)="close()">Valider</button>
+      </div>
+   </div>
+</div>

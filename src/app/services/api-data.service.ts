@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { api } from '../../config/api-config';
+import { api } from '../../config/apiConfig';
 
 import { Observable, of, throwError } from 'rxjs';
 //import  httpClient

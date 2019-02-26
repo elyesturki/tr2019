@@ -24,7 +24,7 @@ export class OriginCitiesComponent implements OnInit {
       for (let i=0; i<data.length ; i++) {
         this.cities.push(data[i].name);
       }
-      console.log("Origin: ", this.cities);
+      //console.log("Origin: ", this.cities);
     });
   }
 

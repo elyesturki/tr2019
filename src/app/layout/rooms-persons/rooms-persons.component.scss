@@ -176,3 +176,205 @@
 }
 
 /**Popup rooms persons**/
+#searchFormLight {
+    min-width: 300px;
+}
+
+#searchFormLight {
+    background: #fff;
+    position: absolute;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    -ms-box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    -o-box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    top: 100%;
+    width: 100%;
+    margin-top: 0px;
+    z-index: 1001;
+    border-radius: 3px;
+}
+
+#searchFormLight .modifPopinCloseBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: 0;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    color: #c5cad1;
+    font-size: 26px;
+}
+#searchFormLight .modifPopinTitle, .formLightDatePick .modifPopinTitle {
+    color: #ffa600;
+    border-bottom: 1px solid #ffa600;
+    padding: 16px 0 14px 7px;
+    border-radius: 0;
+    font-size: 18.24px;
+    text-align: left;
+}
+#searchFormLight *, #searchFormLight ::before, #searchFormLight ::after, #ui-datepicker-div.formLightDatePick *, #ui-datepicker-div.formLightDatePick ::before, #ui-datepicker-div.formLightDatePick ::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#searchFormLight, #searchFormLight + #mapDestination {
+    font-family: 'Arial',sans-serif;
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+#searchFormLight #paxPopinScrollDiv, .labelPolicies, .loadingCancelFees, .contractRemarkClass, .tablePrix {
+    font-size: 14px;
+}
+#searchFormLight #paxPopinScrollDiv {
+    overflow: auto;
+}
+#searchFormLight .contentForm {
+    text-align: left;
+    color: #888;
+}
+#searchFormLight .formSection {
+    border-bottom: 1px solid #e6e8ea;
+}
+#searchFormLight .modifPopinContent {
+    padding: 10px;
+}
+#searchFormLight .displayTable {
+    display: table;
+    width: 100%;
+}
+#searchFormLight .modifPopinContent .formPopinLine > div {
+    vertical-align: middle;
+}
+#searchFormLight .displayTable > * {
+    display: table-cell;
+}
+#searchFormLight .formPopinLine label {
+    margin: 0;
+    font-size: 14px;
+    color: #64686c;
+    font-weight: normal;
+}
+#searchFormLight #paxPopinScrollDiv span {
+    font-size: 16px;
+}
+#searchFormLight .modifPopinContent .formPopinLine > div {
+    vertical-align: middle;
+}
+#searchFormLight .plusMinusForm {
+    text-align: right;
+    white-space: nowrap;
+}
+#searchFormLight .displayTable > * {
+    display: table-cell;
+}
+#searchFormLight * {
+    font-size: 16px;
+}
+#searchFormLight button[disabled], #searchFormLight html input[disabled] {
+    cursor: default;
+}
+#searchFormLight .plusMinusForm button {
+    margin: 0;
+    padding: 0;
+    background: 0;
+    border: 0;
+    line-height: 30px;
+    color: #c5cad1;
+}
+#searchFormLight .formCountDiv {
+    color: #888;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 22px
+}
+#searchFormLight .plusMinusForm button.active {
+    color: #64686c;
+}
+#searchFormLight .plusMinusForm button {
+    margin: 0;
+    padding: 0;
+    background: 0;
+    border: 0;
+    font-size: 26px;
+    color: #c5cad1;
+}
+#searchFormLight .formSection {
+    border-bottom: 1px solid #e6e8ea;
+}
+#searchFormLight * {
+    font-size: 16px;
+}
+#searchFormLight .formPopinLine label {
+    font-size: 14px;
+    color: #64686c;
+    font-weight: normal;
+}
+#searchFormLight .plusMinusForm button {
+    margin: 0;
+    padding: 0;
+    background: 0;
+    border: 0;
+    line-height: 30px;
+    color: #c5cad1;
+}
+#searchFormLight .plusMinusForm > * {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#searchFormLight button, #searchFormLight html input[type="button"], #searchFormLight input[type="reset"], #searchFormLight input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+#searchFormLight button, #searchFormLight select {
+    text-transform: none;
+}
+#searchFormLight button {
+    overflow: visible;
+}
+
+#searchFormLight button {
+    background: #00b1dd ;
+}
+
+#searchFormLight .childrenAgeDiv {
+    background: #f2f4f7;
+}
+#searchFormLight .modifPopinContent {
+    padding: 10px;
+}
+#searchFormLight .modifPopinContent p {
+    margin: 0 0 5px;
+}
+#searchFormLight .labelAgeschild {
+    color: #64686c;
+    font-weight: bold;
+    font-size: 14px;
+}
+#searchFormLight .displayTable {
+    display: table;
+    width: 100%;
+}
+#searchFormLight * {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+#searchFormLight .modifPopinContent .formPopinLine > div {
+    vertical-align: middle;
+}
+#searchFormLight .displayTable > * {
+    display: table-cell;
+}
+#searchFormLight .selectPopinForm, #searchFormLight .selectPopinForm .customSelect {
+    width: 80px;
+}
+
+#searchFormLight .formPopinLine {
+  margin-bottom: 2px
+}

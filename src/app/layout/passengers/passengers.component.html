@@ -6,3 +6,18 @@
   </div> 
   <div class="twidget-class ng-binding">economy class </div> 
 </div> 
+
+<!-- popup -->
+<div class="c-pop c-arrow c-pop-sopt c-show" id="i-search-who-pop" [hidden]="!showPopup">
+    <div>
+        <div class="c-resp-title" ng-i18next="[html]homepage.searchform.selectpassengers"><span class="ng-scope">Passagers</span></div>
+        <div class="c-ul c-sel-mpg" id="i-select-mpg">
+            <div><div class="c-select-mp" data-pax="adults" onclick="FSelectMPG({ e: event, myObj: this }); return false;" data-min="1" data-max="9"><div class="c-m c-off"></div><div class="c-v">1</div><div class="c-p"></div><input name="adults" value="1" type="hidden"></div><span ng-i18next="[html]homepage.searchform.selectpassengers.adults"><span class="ng-scope">Adultes</span></span></div>
+            <div><div class="c-select-mp" data-pax="childs" onclick="FSelectMPG({ e: event, myObj: this }); return false;" data-min="0" data-max="9"><div class="c-m c-off"></div><div class="c-v">0</div><div class="c-p"></div><input name="childs" value="0" type="hidden"></div><span ng-i18next="[html]homepage.searchform.selectpassengers.children"><span class="ng-scope">Enfants </span><span class="ng-scope">(2 - 11 ans)</span></span></div>
+            <div><div class="c-select-mp" data-pax="infants" onclick="FSelectMPG({ e: event, myObj: this }); return false;" data-min="0" data-max="9"><div class="c-m c-off"></div><div class="c-v">0</div><div class="c-p"></div><input name="infants" value="0" type="hidden"></div> <span ng-i18next="[html]homepage.searchform.selectpassengers.infants"><span class="ng-scope">Bébés </span><span class="ng-scope">(&lt; 2 ans)</span></span></div>
+        </div>
+        <div id="i-select-mpg-err"></div>
+        <div class="c-resp-btns c-pad-ts c-pad-bs c-align-c"><span class="c-btn c-closer" ng-i18next="[html]homepage.searchform.hotels.confirmpassengers"><span class="ng-scope">Valider mes passagers</span></span></div>
+    </div>
+    <div class="c-close c-closer"></div>
+<div class="c-pop-arr"></div></div>

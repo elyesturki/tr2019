@@ -14,12 +14,13 @@ import { ApiDataService } from './services/api-data.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DatepickerRangeComponent } from './layout/datepicker-range/datepicker-range.component';
-import { RoomsPersonsComponent, NgbdModalContent } from './layout/rooms-persons/rooms-persons.component';
+import { RoomsPersonsComponent } from './layout/rooms-persons/rooms-persons.component';
 import { DestinationCitiesComponent } from './layout/destination-cities/destination-cities.component';
 import { HotelSearchComponent } from './components/hotel-search/hotel-search.component';
 import { VolSearchComponent } from './components/vol-search/vol-search.component';
 import { OriginCitiesComponent } from './layout/origin-cities/origin-cities.component';
 import { PassengersComponent } from './layout/passengers/passengers.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,17 +35,16 @@ import { PassengersComponent } from './layout/passengers/passengers.component';
     HotelSearchComponent,
     VolSearchComponent,
     OriginCitiesComponent,
-    PassengersComponent,
-    NgbdModalContent
+    PassengersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     NgbModule.forRoot()
   ],
   providers: [ApiDataService],
-  entryComponents: [NgbdModalContent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

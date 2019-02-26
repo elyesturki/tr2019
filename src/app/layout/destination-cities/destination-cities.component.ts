@@ -25,7 +25,7 @@ export class DestinationCitiesComponent implements OnInit {
       for (let i=0; i<data.length ; i++) {
         this.cities.push(data[i].name);
       }
-      console.log("Destination: ", this.cities);
+      //console.log("Destination: ", this.cities);
     });
   }
 
