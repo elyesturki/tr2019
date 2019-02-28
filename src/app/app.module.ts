@@ -21,6 +21,9 @@ import { VolSearchComponent } from './components/vol-search/vol-search.component
 import { OriginCitiesComponent } from './layout/origin-cities/origin-cities.component';
 import { PassengersComponent } from './layout/passengers/passengers.component';
 import { FormsModule } from '@angular/forms';
+import { SearchMoreOptionsComponent } from './layout/search-more-options/search-more-options.component';
+
+import { Ng5SliderModule } from 'ng5-slider';
 
 @NgModule({
   declarations: [
@@ -35,13 +38,15 @@ import { FormsModule } from '@angular/forms';
     HotelSearchComponent,
     VolSearchComponent,
     OriginCitiesComponent,
-    PassengersComponent
+    PassengersComponent,
+    SearchMoreOptionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    Ng5SliderModule,
     NgbModule.forRoot()
   ],
   providers: [ApiDataService],
