@@ -7,7 +7,7 @@
 </div>
 
   <!-- popup -->
-<div id="searchFormLight" class="modifPopin ng-scope" [hidden]="!showPopup">
+<div id="searchFormLight" class="modifPopin ng-scope fadeIN" [hidden]="!showPopup">
    <button type="button" (click)="close()" class="modifPopinCloseBtn fas fa-times-circle"></button>                          
    <div class="modifPopinTitle">Chambres</div>
    <div id="paxPopinScrollDiv">
@@ -38,8 +38,8 @@
                   [disabled]="room.adults === maxAdults"></button>                                       
                </div>
             </div>
-            <div id="formLineChild" class="formPopinLine displayTable">
-               <div>                                           <label>                                               <span>                                                    Enfants                                                   <span class="nowrap ageChildLabel">(0 - 16 ans)</span>                                                </span>                                           </label>                                        </div>
+            <div id="formLineChild1" class="formPopinLine displayTable">
+               <div><label><span>Enfants<span class="nowrap ageChildLabel">(0 - 16 ans)</span></span> </label> </div>
                <div class="plusMinusForm">
                   <button type="button" class="fas fa-minus-circle" [ngClass]="{active: room.childrens.length > minChildrens }" (click)="removeChild(i)" [disabled]="room.childrens.length === minChildrens">                                           </button>                                           
                   <div class="formCountDiv ng-binding">{{room.childrens.length}}</div>
@@ -50,7 +50,7 @@
 
           <div class="modifPopinContent childrenAgeDiv ng-scope" *ngIf="room.childrens.length > minChildrens">
             <p class="labelAgeschild">Age des enfants lors de l'arrivée</p>
-            <div id="formLineChild" class="formPopinLine displayTable ng-scope" *ngFor="let child of room.childrens; index as i">
+            <div id="formLineChild" class="formPopinLine displayTable ng-scope fadeIN" *ngFor="let child of room.childrens; index as i">
               <div><label><span class="ng-binding">Enfant {{i+1}}</span></label></div>
               <div class="selectPopinForm"> <div class="contSelect">
               <div class="select-style">  

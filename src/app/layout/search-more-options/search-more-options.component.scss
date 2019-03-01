@@ -1,0 +1,55 @@
+.btnSearchFormDiv {
+    display: inline-block;
+   // float: right;
+    padding-right: 7px;
+    margin-top: 10px;
+}
+.moreOption {
+    text-align: right;
+}
+
+.moreOption .btnMoreOption { color: #fff;}
+
+.contentMoreOptions {
+    margin-top: 10px;
+    color: #e0e0e0;
+    padding-top: 10px
+    //height: 50px;
+}
+ul.mealplanList { padding: 0}
+ul.mealplanList li {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0;
+    float: left;
+    width: 33.33%;
+}
+
+ul.mealplanList li input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+
+.contentMoreOptions [type="checkbox"]:not(:checked) + label, .contentMoreOptions [type="checkbox"]:checked + label {
+    position: relative;
+    padding: 0 0 0 10px;
+    cursor: pointer;
+    display: inline;
+}
+
+.contentMoreOptions .ng5-slider {
+    margin: 0 !important
+}
+
+.contentMoreOptions > div {
+    margin-bottom: 15px
+}
+.contentMoreOptions > div+div {
+    margin-bottom: 0px
+}
+
+.contentMoreOptions .ng5-slider-bubble {
+    color: #ffffff !important 
+}

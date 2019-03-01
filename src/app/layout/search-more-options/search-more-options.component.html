@@ -1,0 +1,34 @@
+ <div id="moreOptions" class="clearfix pl-4 pr-4">
+   <div class="moreOption btnSearchFormDiv">
+    <button type="button" class="btnMoreOption" (click)="toggleMoreOptions()">More option 
+    <i class="fas" [ngClass]="[showMoreOptions ? 'fa-minus' : 'fa-plus']"></i>
+    </button>
+   </div>
+
+   <div class="contentMoreOptions fadeIN col-sm-12" [hidden]="!showMoreOptions">
+   <div class="row">
+      <div class="col-xs-12 col-sm-3"><i class="fas fa-money-check-alt"></i> Budget</div>
+      <div class="col-xs-12 col-sm-8">
+        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+      </div>
+      </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3"><i class="fas fa-utensils"></i> Food</div>
+      <div class="col-xs-12 col-sm-8">
+        <ul class="mealplanList clearfix">
+          <li><input id="filterMealPlanRO" data-val="RO" type="checkbox">
+              <label for="filterMealPlanRO">Logement seul</label>
+          </li>
+          <li><input id="filterMealPlanBB" type="checkbox"><label for="filterMealPlanBB">Petit déjeuner</label>
+          </li>                                         
+          <li><input id="filterMealPlanHB" type="checkbox"><label for="filterMealPlanHB">Demi pension</label>
+          </li>                                         
+          <li><input id="filterMealPlanFB" type="checkbox"><label for="filterMealPlanFB">Pension complète</label> 
+          </li>                                         
+          <li><input id="filterMealPlanAI" type="checkbox"><label for="filterMealPlanAI">Tout compris</label> 
+          </li>
+        </ul>
+      </div>
+    </div>
+   </div>
+ </div>

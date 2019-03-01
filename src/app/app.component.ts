@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 export class AppComponent {
   title = 'tr2019';
   ngOnInit() {
-    $('body').addClass('testClassJQ');
+   /* $('body').addClass('testClassJQ');*/
   }
 
 }
