@@ -24,6 +24,8 @@ import { FormsModule } from '@angular/forms';
 import { SearchMoreOptionsComponent } from './layout/search-more-options/search-more-options.component';
 
 import { Ng5SliderModule } from 'ng5-slider';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,9 @@ import { Ng5SliderModule } from 'ng5-slider';
     HttpClientModule,
     FormsModule,
     Ng5SliderModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot()
   ],
   providers: [ApiDataService],

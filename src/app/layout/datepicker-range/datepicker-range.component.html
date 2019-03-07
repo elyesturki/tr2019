@@ -2,22 +2,28 @@
   <div class="twidget-input-box"> 
     <label class="ng-binding">Depart date</label> 
     <div class="twidget-input-box-show-popup"> 
-      <input type="text">
+      <input type="text" placeholder="From"
+               [(ngModel)]="dateTimeRange"
+               [selectMode]="'rangeFrom'"
+               [owlDateTimeTrigger]="dtRange2" [owlDateTime]="dtRange2">
         <div class="twidget-icon-cal"></div>
-          <span class="twidget-date-text twidget-date-depart">Depart date</span> 
-          <span class="twidget-date-text twidget-date-depart ng-hide d-none">18 January, Fri</span> 
-        </div> 
+          <span class="twidget-date-text twidget-date-depart"><owl-date-time #dtRange2></owl-date-time></span>
+    </div> 
   </div> 
-</div> 
+</div>
 
 <div class="twidget-dep-date twidget-form-item ng-isolate-scope">
   <div class="twidget-input-box"> 
     <label class="ng-binding">Return date</label>
-    <div class="twidget-input-box-show-popup">
-      <input type="text">
+    <div class="twidget-input-box-show-popup"> 
+      <input type="text" placeholder="To"
+               [(ngModel)]="dateTimeRange"
+               [selectMode]="'rangeTo'"
+               [owlDateTimeTrigger]="dtRange3" [owlDateTime]="dtRange3">
         <div class="twidget-icon-cal"></div>
-          <span class="twidget-date-text twidget-date-depart">Return date</span>
-          <span class="twidget-date-text twidget-date-depart ng-hide d-none">25 January, Fri</span>
-        </div>
+          <span class="twidget-date-text twidget-date-return"><owl-date-time #dtRange3></owl-date-time></span> 
+    </div>
   </div> 
-</div> 
+</div>
+
+<!--{{dateTimeRange}}-->
