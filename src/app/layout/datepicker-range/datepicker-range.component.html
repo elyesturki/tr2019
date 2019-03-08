@@ -1,29 +1,43 @@
 <div class="twidget-dep-date twidget-form-item ng-isolate-scope">
   <div class="twidget-input-box"> 
-    <label class="ng-binding">Depart date</label> 
+    <label class="ng-binding">Depart date </label> 
     <div class="twidget-input-box-show-popup"> 
       <input type="text" placeholder="From"
                [(ngModel)]="dateTimeRange"
                [selectMode]="'rangeFrom'"
-               [owlDateTimeTrigger]="dtRange2" [owlDateTime]="dtRange2">
+               [owlDateTimeTrigger]="dtRange2" 
+               [owlDateTime]="dtRange2"
+               [min]="minDTRange2"
+               (focus)='getTotalDays(dateTimeRange);setMinRange()'
+               >
         <div class="twidget-icon-cal"></div>
-          <span class="twidget-date-text twidget-date-depart"><owl-date-time #dtRange2></owl-date-time></span>
+          <span class="twidget-date-text twidget-date-depart"><owl-date-time [pickerType]="'calendar'" #dtRange2 ></owl-date-time></span>
     </div> 
   </div> 
 </div>
 
 <div class="twidget-dep-date twidget-form-item ng-isolate-scope">
-  <div class="twidget-input-box"> 
-    <label class="ng-binding">Return date</label>
+  <div class="twidget-input-box">
+    <label class="ng-binding">Return date <span class="float-right">Nb nuit(s): {{totalNuits}}</span></label>
     <div class="twidget-input-box-show-popup"> 
       <input type="text" placeholder="To"
                [(ngModel)]="dateTimeRange"
                [selectMode]="'rangeTo'"
-               [owlDateTimeTrigger]="dtRange3" [owlDateTime]="dtRange3">
+               [owlDateTimeTrigger]="dtRange3" 
+               [owlDateTime]="dtRange3"
+               [min]="minDTRange3"
+               (focus)='getTotalDays(dateTimeRange);setMinRange()'
+               >
         <div class="twidget-icon-cal"></div>
-          <span class="twidget-date-text twidget-date-return"><owl-date-time #dtRange3></owl-date-time></span> 
+          <span class="twidget-date-text twidget-date-return"><owl-date-time  [pickerType]="'calendar'" #dtRange3 ></owl-date-time></span> 
     </div>
   </div> 
 </div>
 
-<!--{{dateTimeRange}}-->
+<!--
+{{dateTimeRange | json}}
+{{dateTimeRange}}
+Options:
+[pickerMode]="'dialog'"
+[startAt]="startAt"
+-->

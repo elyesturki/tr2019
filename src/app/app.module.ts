@@ -26,6 +26,7 @@ import { SearchMoreOptionsComponent } from './layout/search-more-options/search-
 import { Ng5SliderModule } from 'ng5-slider';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { OWL_DATE_TIME_LOCALE } from 'ng-pick-datetime';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     NgbModule.forRoot()
   ],
-  providers: [ApiDataService],
+  providers: [ApiDataService, {provide: OWL_DATE_TIME_LOCALE, useValue: 'en'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
