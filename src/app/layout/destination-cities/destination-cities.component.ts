@@ -22,10 +22,11 @@ export class DestinationCitiesComponent implements OnInit {
 
   public getCities() {
    this.apiDataService.getCities().subscribe((data: any) => {
-      for (let i=0; i<data.length ; i++) {
-        this.cities.push(data[i].name);
+     console.log("data: ",data);
+      for (let i=0; i<data.cities.length ; i++) {
+        this.cities.push(data.cities[i].name);
       }
-      //console.log("Destination: ", this.cities);
+      console.log("cities: ", this.cities);
     });
   }
 

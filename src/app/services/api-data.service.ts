@@ -16,10 +16,16 @@ const httpOptions = {
 
 export class ApiDataService {
 
-  constructor(private http: HttpClient) { }
+  apiURL: string = '';
+  apiURLCities: string = '';
 
-  apiURL = api.urlTest3;
-  
+  constructor(private http: HttpClient) {
+    if (api && api.enable) {
+        this.apiURL = api.urlTest;
+        this.apiURLCities = api.domaine+api.uriCities+'?api_key='+api.apiKey;
+    }
+  }
+
   private extractData(res: Response) {
     let body = res;
     return body || { };
@@ -40,7 +46,7 @@ export class ApiDataService {
   }
 
   public getCities() {
-    return this.http.get(this.apiURL, httpOptions)
+    return this.http.get(this.apiURLCities, httpOptions)
     /*.pipe(
       map(this.extractData),
       catchError(this.handleError)
